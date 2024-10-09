@@ -1,0 +1,169 @@
+body {
+  background: #f6bd26;
+}
+
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.loading-container {
+  height: 37.5em;
+  width: 31.5em;
+  border: 1px solid #000;
+  position: relative;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  overflow: hidden;
+}
+
+.loading-container::before {
+  position: absolute;
+  content: "";
+
+  background: #fad168;
+  height: 30em;
+  width: 30em;
+  border-radius: 50%;
+
+  transform: translateX(-50%);
+  left: 50%;
+  z-index: -1;
+}
+
+.cup {
+  height: 15.62em;
+  width: 11.87em;
+  background: linear-gradient(
+    to top,
+    #8c5b33 30%,
+    #b5a581 30%,
+    #b5a582 80%,
+    #8c5b33 80%
+  );
+
+  clip-path: polygon(0 0, 100% 0, 85% 100%, 15% 100%);
+  overflow: hidden;
+
+  position: absolute;
+  /* animation: prepare 2s infinite; */
+  animation: prepare 2s ease-in-out infinite;
+}
+
+.cup::after {
+  position: absolute;
+  content: "";
+  background: #ffffff1a;
+  height: 17.5em;
+  width: 6.25em;
+}
+
+.heart {
+  background: #cd4036;
+  height: 2.5em;
+  width: 2.5em;
+  position: absolute;
+  margin: auto;
+  left: 0.62em;
+  right: 0;
+  top: 0;
+  bottom: 0;
+
+  transform: rotate(45deg);
+  border-radius: 0 0 0.62em 0;
+}
+
+.heart::before,
+.heart::after {
+  position: absolute;
+  content: "";
+  height: 60%;
+  width: 100%;
+  background: #cd4036;
+  border-radius: 4.68em 4.68em 0 0;
+}
+
+.heart::before {
+  top: -58%;
+}
+
+.heart::after {
+  transform: rotate(-90deg);
+  top: 20%;
+  right: 78%;
+}
+
+.drink {
+  content: "";
+  width: 2em;
+  height: 10em;
+  background: linear-gradient(to bottom, #7f4f24 40%, #936639 50%);
+
+  position: absolute;
+  top: 0;
+
+  z-index: -1;
+
+  animation: fill 3s linear;
+}
+
+.lid {
+  height: 1.87em;
+  width: 13.75em;
+  background: linear-gradient(to right, #592c10 52.5%, #4e2919 52.5%);
+  position: absolute;
+
+  top: 10em;
+
+  border-radius: 0.3em;
+}
+
+.lid::before {
+  position: absolute;
+  content: " ";
+  height: 1.56em;
+  width: 11.25em;
+  background: linear-gradient(to right, #592c10 54%, #4e2919 54%);
+  bottom: 1.43em;
+  left: 1.15em;
+
+  border-radius: 0.3em;
+}
+
+.lid::after {
+  position: absolute;
+  content: "";
+  height: 0;
+  width: 4.5em;
+  bottom: 2.2em;
+  border-bottom: 1.87em solid #4e2919;
+  border-left: 3.5em solid transparent;
+
+  right: 1.5em;
+  z-index: -1;
+}
+
+.steam {
+  height: 0.5em;
+  width: 1.25em;
+  border-radius: 0.3em;
+  background: #fbeebf;
+  position: absolute;
+  top: 7.3em;
+  left: 19.87em;
+}
+
+@keyframes prepare {
+  0% {
+    right: 0;
+    transform: translateX(100%);
+  }
+  100% {
+    right: 30%;
+    transform: translateX(0);
+  }
+}

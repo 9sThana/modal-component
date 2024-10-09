@@ -1,0 +1,71 @@
+.backdrop {
+  width: 100%;
+  min-height: 100dvh;
+  padding: 1rem;
+  background: #000000b2;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  z-index: 20;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.modal-bg {
+  min-width: 150px;
+  max-width: 80%;
+  min-height: 100px;
+  max-height: 80%;
+  background: #fff;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+
+  padding: 1.2rem;
+
+  border-radius: 1rem;
+  position: relative;
+}
+
+.close-btn {
+  position: absolute;
+  right: 1rem;
+  top: 1rem;
+}
+
+.close-btn i {
+  color: #e63946;
+
+  font-size: 30px;
+  cursor: pointer;
+}
+
+.modal-header {
+  margin-bottom: 0.5rem;
+  letter-spacing: 0.025rem;
+
+  max-height: 20dvh;
+  max-width: 80dvw;
+  overflow: auto;
+}
+
+.modal-body {
+  max-height: 60dvh;
+  overflow: auto;
+
+  padding-right: 1.2rem;
+  scroll-behavior: smooth;
+}
+
+.modal-body::-webkit-scrollbar {
+  display: none;
+}
+
+.modal-footer {
+  padding: 0.5rem;
+  margin-top: 0.5rem;
+
+  max-height: 20dvh;
+  overflow: auto;
+}
