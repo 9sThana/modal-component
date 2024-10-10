@@ -1,6 +1,7 @@
 <script>
 
 export default {
+
 }
 
 </script>
@@ -12,39 +13,26 @@ export default {
 
   <Modal v-if="activeModal == 'modal1'" @close="activeModal = null" :showHeader="true">
 
-    <template v-slot:modal_title>
+    <template v-slot:header>
       <h2>This is the 1st modal!</h2>
     </template>
 
-    <template v-slot:modal_body>
+    <main>
       <p>Click outside the modal content or on the [x] button to close it.</p>
-      <p>
-        ------------------------------------------------------------------------------------------------------------------------
-      </p>
-    </template>
+    </main>
 
-    <template v-slot:modal_footer>
-      <p>------------ modal footer ------------</p>
-    </template>
 
   </Modal>
 
   <Modal v-if="activeModal == 'modal2'" @close="activeModal = null" :showHeader="true">
 
-    <template v-slot:modal_title>
+    <template v-slot:header>
       <h2>This is the 2nd modal!</h2>
     </template>
 
-    <template v-slot:modal_body>
+    <main>
       <p>Click outside the modal content or on the [x] button to close it.</p>
-      <p>
-        ------------------------------------------------------------------------------------------------------------------------
-      </p>
-    </template>
-
-    <template v-slot:modal_footer>
-      <p>------------ modal footer ------------</p>
-    </template>
+    </main>
 
   </Modal>
 </template>

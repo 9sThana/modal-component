@@ -3,6 +3,10 @@ import "../assets/modal.css"
 export default {
     name: 'modalComponent',
     props: {
+        size: {
+            type: String,
+            default: ""
+        },
         showHeader: {
             type: Boolean,
             default: true
@@ -25,25 +29,25 @@ export default {
 </script>
 
 <template>
-    <div class="backdrop" @click="handleOutsideClick">
-        <div class="modal-bg" @click.stop>
+    <form class="backdrop" @click="handleOutsideClick">
+        <div class="modal-bg" :class="size" @click.stop>
             <div class="modal-content">
                 <div class="modal-header">
                     <div class="close-btn" @click="closeModal">
                         <i class='bx bxs-x-square'></i>
                     </div>
                     <div class="modal-header" v-if="showHeader">
-                        <slot name="modal_title"></slot>
+                        <slot name="header"></slot>
                     </div>
                 </div>
                 <div class="modal-body">
-                    <slot name="modal_body"></slot>
+                    <slot></slot>
                 </div>
 
                 <div class="modal-footer" v-if="showFooter">
-                    <slot name="modal_footer"></slot>
+                    <slot name="footer"></slot>
                 </div>
             </div>
         </div>
-    </div>
+    </form>
 </template>
