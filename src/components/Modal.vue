@@ -3,10 +3,6 @@ import "../assets/modal.css"
 export default {
     name: 'modalComponent',
     props: {
-        isOpen: {
-            type: Boolean,
-            required: true
-        },
         showHeader: {
             type: Boolean,
             default: true
@@ -29,7 +25,7 @@ export default {
 </script>
 
 <template>
-    <div class="backdrop" v-if="isOpen" @click="handleOutsideClick">
+    <div class="backdrop" @click="handleOutsideClick">
         <div class="modal-bg" @click.stop>
             <div class="modal-content">
                 <div class="modal-header">
