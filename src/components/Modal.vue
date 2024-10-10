@@ -5,7 +5,7 @@ export default {
     props: {
         size: {
             type: String,
-            default: ""
+            default: "default"
         },
         showHeader: {
             type: Boolean,

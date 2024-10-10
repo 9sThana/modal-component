@@ -4,3 +4,19 @@
   box-sizing: border-box;
   font-family: "Exo 2", sans-serif;
 }
+
+.container {
+  display: flex;
+  flex-direction: column;
+  height: 100dvh;
+  justify-content: center;
+  align-items: center;
+}
+
+button {
+  margin: .25rem;
+  width: 200px;
+  height: 50px;
+
+  cursor: pointer;
+}

@@ -2,7 +2,6 @@
   width: 100%;
   min-height: 100dvh;
   background: #000000b2;
-
   display: flex;
   justify-content: center;
   align-items: center;
@@ -16,9 +15,6 @@
 .modal-bg {
   min-width: 300px !important;
   min-height: 100px !important;
-
-  max-width: 80dvw;
-  max-height: 80dvh;
 
   background: #fff;
   box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
@@ -46,8 +42,9 @@
   margin-bottom: 0.5rem;
   letter-spacing: 0.025rem;
 
+  padding-right: 30px;
+
   max-height: 20dvh;
-  max-width: 70%;
   overflow: auto;
 }
 
@@ -61,7 +58,6 @@
 
 .modal-body::-webkit-scrollbar {
   width: 10px;
-  /* background: #000; */
 }
 
 .modal-body::-webkit-scrollbar-track {
@@ -87,8 +83,19 @@
 }
 
 /* Modal size */
+.S,
+.default,
+.L,
+.XL {
+  max-height: 80dvh !important;
+}
+
 .S {
   width: 30dvw !important;
+}
+
+.default {
+  max-width: 80dvw !important;
 }
 
 .L {
